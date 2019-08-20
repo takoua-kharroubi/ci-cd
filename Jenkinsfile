@@ -5,7 +5,7 @@ node{
   def NODE_PORT = 31000 + "${ghprbPullId}".toInteger()
   try{
     stage('Checkout'){
-      git(url: "https://github.com/takoua-kharroubi/pfe.git", branch: "${ghprbSourceBranch}")
+      git(url: "https://github.com/takoua-kharroubi/ci-cd.git", branch: "${ghprbSourceBranch}")
       imageTag = NODE_PORT
     } 
     stage('RUN Unit Tests'){
